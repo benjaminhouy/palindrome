@@ -4,7 +4,11 @@ require_relative "bhouy_palindrome/version"
 module BhouyPalindrome
    # Returns true for a palindrome, false otherwise.
    def palindrome?
-    processed_content == processed_content.reverse
+    if processed_content =~ /\S/
+      processed_content == processed_content.reverse
+    else
+      false
+    end
   end
 
   private
@@ -22,12 +26,3 @@ end
 class Integer
   include BhouyPalindrome
 end
-
-
-
-
-
-
-
-
-

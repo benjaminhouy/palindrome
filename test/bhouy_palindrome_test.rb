@@ -28,4 +28,12 @@ class BhouyPalindromeTest < Minitest::Test
     assert 12321.palindrome?
   end
 
+  def test_empty_submission
+    refute "".palindrome?
+  end
+
+  def test_whitespace_submission
+    refute " ".palindrome?
+  end
+
 end
